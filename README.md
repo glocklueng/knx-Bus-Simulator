@@ -10,6 +10,8 @@ Please note that, however you use this toolset, which is provided as is and with
 nothing contained herein has been run through any certification or validation of the KNX organisation.
 It is provided as starting point and in the hope that it may be useful to you.
 
+The provided code is nothing for the faint hearted. There are little comments for now.
+
 !!!!! DO NOT USE ANY OF THIS SOFTWARE IN A PRODUCTIVE EIB/KNX BUS INSTALLATION !!!!!
 
 Now we start:
@@ -31,7 +33,7 @@ In simulation mode knxbridge will - simulating the real TPUART - copy everything
 is the central point of communication and the process needs to be started first.
 
 knxmon is a knx monitor and ALL GROUP OBJECT object server. Right now it only suports DPT 1.xxx and DPT.9xxx, but it is planned to
-support all known DPTs, which is merely a matter of time to implement than a technical challenge.
+support all known DPTs, which is merely a matter of time to implement than a technical challenge. This one requires a table, nodedata.h, defining all the group addresses supposed to be monitored. Monitored values are required e.g. by the hdlpellet or hdlsolar, which need some temperatures provided by the real temperature sensors. In fact, the simulation allows you to send such values so that the handler, e.g. hdlpellet, can be tested.
 
 sendbit is used for sending a DPT 1.xxx value to some arbitrary receiver (sendbit -s <SENDER ADDRESS> -r <RECEIVING GROUP> -v <VALUE; 0 or
 1>)
