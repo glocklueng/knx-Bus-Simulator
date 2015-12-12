@@ -12,6 +12,13 @@ It is provided as starting point and in the hope that it may be useful to you.
 
 The provided code is nothing for the faint hearted. There are little comments for now.
 
+All intelligence required about the EIB/KNX bus to develop the code contained herein was gained by reading:
+
+"Serial Data Transmission and KNX Protocol", provided by KNX Association,
+"EIB-TP-UART-IC", provided by Siemens, Regensburg
+
+Both of these documents are freely available in the internet provided by their respective copyright holders.
+
 !!!!! DO NOT USE ANY OF THIS SOFTWARE IN A PRODUCTIVE EIB/KNX BUS INSTALLATION !!!!!
 
 Now we start:
